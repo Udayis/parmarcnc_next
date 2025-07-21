@@ -1,0 +1,367 @@
+/* Footer Styles */
+:root {
+    --primary-color: #a5c847;
+    --accent-color: #a5c847;
+    --dark-accent: #a5c847;
+    --light-text: #ecf0f1;
+    --footer-bottom: #1a252f;
+    --transition-fast: 0.3s;
+    --transition-medium: 0.5s;
+    --transition-slow: 0.8s;
+}
+
+.footer {
+    background-color: #4d4f48;
+    color: #ffffff;
+    padding: 2rem 1rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated shimmer border at top */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+    z-index: 2;
+}
+
+@keyframes shimmer {
+    0% { background-position: -100% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.iso-logo, .certificate-image {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.08));
+    transition: filter 0.3s;
+}
+
+.iso-logo::after, .certificate-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.0) 100%);
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+    pointer-events: none;
+}
+
+.iso-logo:hover::after, .certificate-image:hover::after {
+    left: 120%;
+    transition: left 0.5s;
+}
+
+.footer-middle {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.footer-address {
+    max-width: 450px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #3a3a3a;
+    border: 1px solid #5a5a5a;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    /* No invert */
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.footer-company-desc {
+    max-width: 700px;
+    margin: 1.2rem auto;
+    line-height: 1.4;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    background-color: var(--primary-color);
+    color: #1e1e1e;
+    padding: 0.7rem;
+    margin: 0 -1rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.developer-text {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+    .footer-content {
+        padding: 0 2rem;
+    }
+    
+    .certificate-img {
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+    }
+    
+    .footer-address {
+        font-size: 0.9rem;
+    }
+    
+    .footer-company-desc {
+        font-size: 0.8rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.7rem;
+    }
+    .iso-logo {
+        max-width: 60px !important;
+    }
+    .certificate-image {
+        max-width: 70px !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer-title {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+    
+    .footer-address p,
+    .company-desc p {
+        font-size: 0.85rem;
+    }
+    
+    .certificate-img {
+        max-width: 80px;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .footer-container {
+        padding: 1rem 0;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+    }
+    
+    .footer-address p,
+    .company-desc p {
+        font-size: 0.8rem;
+    }
+    
+    .certificate-img {
+        max-width: 70px;
+    }
+    
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contact-info p {
+        font-size: 0.8rem;
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer-title {
+        font-size: 1rem;
+    }
+    
+    .footer-address p,
+    .company-desc p {
+        font-size: 0.75rem;
+    }
+    
+    .certificate-img {
+        max-width: 60px;
+    }
+    
+    .social-link {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .contact-info p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Shine effect for images - use wrapper for Next.js <Image /> */
+.footer-image-shine {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.footer-image-shine img,
+.footer-image-shine .iso-logo,
+.footer-image-shine .certificate-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.footer-image-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.0) 100%);
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+    pointer-events: none;
+}
+.footer-image-shine:hover::after {
+    left: 120%;
+    transition: left 0.5s;
+}
+
+.iso-logo {
+    max-width: 120px !important;
+    height: auto !important;
+}
+.certificate-image {
+    max-width: 120px !important;
+    height: auto !important;
+} 

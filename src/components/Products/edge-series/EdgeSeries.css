@@ -1,0 +1,501 @@
+.edge_series {
+  margin-top: 120px;
+}
+
+/* Hero Section - Main Container */
+.cnc_hero_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(163, 198, 74, 0.10), 0 2px 8px rgba(0,0,0,0.08);
+  gap: 2.5rem;
+}
+
+.cnc_hero_image_wrapper {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+
+#cnc_logo_img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.08); */
+  /* border-radius: 12px; */
+  background: #f9f9f9;
+  display: block;
+  margin: 0 auto;
+}
+
+#cnc_logo_img:hover {
+  transform: scale(1.03);
+}
+
+/* Green Box on Right */
+.cnc_text_section {
+  flex: 0 0 50%;
+  background-color: #A5C847;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  box-shadow: 0 4px 24px rgba(163, 198, 74, 0.10);
+}
+
+/* Dark Grey Box for Title */
+.cnc_description {
+  background-color: #4D4F48;
+  color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#CNC_label_text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+#CNC_sub_label_text {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Buttons Section */
+.edge-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.edge-hero-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  text-decoration: none;
+}
+
+.edge-hero-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-2px) scale(1.03);
+  color: #000;
+}
+
+.edge-hero-btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* General Specifications Section */
+.img_and_data {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  padding: 3rem 3rem 3rem 3.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(163, 198, 74, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom: 3rem;
+}
+
+/* When data is on the left */
+.img_and_data.data_left .Datapart_main_part {
+  flex: 0 0 60%;
+}
+
+.img_and_data.data_left .img_and_data_imgwrap {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* When image is on the left */
+.img_and_data.image_left .Datapart_main_part {
+  flex: 0 0 60%;
+}
+
+.img_and_data.image_left .img_and_data_imgwrap {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Datapart_main_part {
+  flex: 0 0 60%;
+}
+
+.img_and_data_imgwrap {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img_and_data_imgwrap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#datapart_data {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.General_specification {
+  margin-top: 1.5rem;
+}
+
+#general_label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #A5C847;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+#general_label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #A5C847;
+}
+
+.Genereic_details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Genereic_details li {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.Genereic_details li:hover {
+  color: #A5C847;
+  transform: translateX(5px);
+}
+
+.Genereic_details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #A5C847;
+  font-weight: 900;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .cnc_hero_section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  .cnc_hero_image_wrapper, .cnc_text_section {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+  }
+  .cnc_text_section {
+    padding: 2rem 1.2rem;
+  }
+  #cnc_logo_img {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cnc_hero_section {
+    padding: 1.2rem 0.5rem;
+    gap: 1.2rem;
+  }
+  .cnc_text_section {
+    padding: 1.2rem 0.7rem;
+    border-radius: 10px;
+  }
+  .cnc_description {
+    padding: 1.2rem 0.7rem;
+    border-radius: 8px;
+  }
+  #CNC_label_text {
+    font-size: 1.2rem;
+  }
+  #CNC_sub_label_text {
+    font-size: 0.95rem;
+  }
+  #cnc_logo_img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cnc_hero_section {
+    flex-direction: column-reverse !important;
+    padding: 0.5rem 0.2rem;
+    gap: 0.5rem;
+  }
+  .mobile-image-below {
+    margin-top: 1rem;
+  }
+  .cnc_text_section {
+    padding: 0.7rem 0.3rem;
+    border-radius: 8px;
+  }
+  .cnc_description {
+    padding: 0.7rem 0.3rem;
+    border-radius: 6px;
+  }
+  #CNC_label_text {
+    font-size: 1rem;
+  }
+  #CNC_sub_label_text {
+    font-size: 0.85rem;
+  }
+  #cnc_logo_img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+    display: block;
+    position: static;
+    box-sizing: border-box;
+    object-fit: contain;
+  }
+  .img_and_data {
+    flex-direction: column-reverse !important;
+    gap: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+  .img_and_data_imgwrap {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .img_and_data_imgwrap img,
+  .img_and_data_imgwrap .next-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+  }
+  .Datapart_main_part {
+    width: 100%;
+  }
+}
+
+/* Fourth Part (matching original) */
+.fourth_part {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: slideUp 0.8s ease-out;
+}
+
+.image_part {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.image_part img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.image_part img:hover {
+  transform: scale(1.03);
+}
+
+.image_data_part {
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image_data_part p {
+  color: var(--primary-color, #A5C847);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.image_data_part p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color, #4D4F48);
+}
+
+.image_data_part img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .fourth_part {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+  .image_part, .image_data_part {
+    width: 100%;
+    padding: 1rem;
+  }
+  .image_part img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Legend Section (matching original) */
+.fifth_part {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  align-items: center;
+}
+
+.legend_data {
+  width: 60%;
+  padding-right: 2rem;
+}
+
+.legend_data p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.legend img {
+  width: 35%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.legend img:hover {
+  transform: scale(1.05);
+}
+
+.legend_image {
+  padding: 0 2rem 2rem;
+  text-align: center;
+}
+
+.legend_image img {
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+@media screen and (max-width: 1024px) {
+  .legend {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .legend_data, .legend img {
+    width: 100%;
+    padding: 0;
+  }
+  .legend_image img {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#calc_img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 0;
+}

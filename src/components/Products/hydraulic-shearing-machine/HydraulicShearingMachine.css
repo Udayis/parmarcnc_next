@@ -1,0 +1,1031 @@
+/* Scoped styles for Hydraulic Shearing Machine page */
+.hydraulic-shearing-root {
+  --primary-color: #A5C847;
+  --secondary-color: #4D4F48;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --animation-duration: 0.3s;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hydraulic-shearing-root .main_div {
+  margin-top: 9.5%;
+  margin-bottom: 2%;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hydraulic-shearing-root .Tech_images {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 10%;
+  gap: 20px;
+  animation: fadeInUp var(--animation-duration) ease-out;
+}
+
+.hydraulic-shearing-root .Tech_images img {
+  width: 40%;
+  height: 300px;
+  transition: transform 0.3s ease;
+}
+
+.hydraulic-shearing-root .Tech_images img:hover {
+  transform: translateY(-5px);
+}
+
+.hydraulic-shearing-root .std_com {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--secondary-color);
+  justify-content: space-around;
+  padding: 3% 2%;
+  margin: 1%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp var(--animation-duration) ease-out;
+}
+
+.hydraulic-shearing-root .std_com_1, .hydraulic-shearing-root .std_com_2 {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px 0;
+}
+
+.hydraulic-shearing-root .std_label {
+  margin-bottom: 15px;
+}
+
+.hydraulic-shearing-root .std_label p {
+  color: var(--primary-color);
+  font-size: 1.45rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.hydraulic-shearing-root .std_label p::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.hydraulic-shearing-root .std_label_data, .hydraulic-shearing-root .std_label_data_2 {
+  padding-left: 20px;
+}
+
+.hydraulic-shearing-root .std_label_data ul, .hydraulic-shearing-root .std_label_data_2 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hydraulic-shearing-root .std_label_data ul li, .hydraulic-shearing-root .std_label_data_2 ul li {
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+.hydraulic-shearing-root .std_label_data ul li:hover, .hydraulic-shearing-root .std_label_data_2 ul li:hover {
+  transform: translateX(5px);
+}
+
+.hydraulic-shearing-root .std_label_data ul li::before, .hydraulic-shearing-root .std_label_data_2 ul li::before {
+  content: '•';
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.hydraulic-shearing-root #shearing_label, .hydraulic-shearing-root #excellence_pabel {
+  background-color: var(--primary-color);
+  text-align: center;
+  color: var(--text-light);
+  padding: 0.7%;
+  font-size: 1.4rem;
+  margin: 1%;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn var(--animation-duration) ease-out;
+}
+
+.hydraulic-shearing-root .sharig_images {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2.5rem 0;
+}
+
+.hydraulic-shearing-root .image_div {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.hydraulic-shearing-root .im_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hydraulic-shearing-root .i_sharing {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.hydraulic-shearing-root .d_label {
+  background: #A5C847;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  margin-top: 0.8rem;
+  padding: 0.7rem 0 0.7rem 0;
+  width: 100%;
+}
+
+.hydraulic-shearing-root .shering_data {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.hydraulic-shearing-root .shering_data ul {
+  padding-left: 1.2rem;
+}
+
+.hydraulic-shearing-root .shering_data ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+
+.hydraulic-shearing-root .Excellence_part {
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.hydraulic-shearing-root .ex_img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  background: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hydraulic-shearing-root .ex_img_1 {
+  background: #4D4F48;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 260px;
+  max-width: 420px;
+  flex: 1 1 300px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  position: relative;
+}
+
+.hydraulic-shearing-root .ex_img_1 img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  display: block;
+}
+
+.hydraulic-shearing-root .ex_label {
+  background: #a3c64a;
+  padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.hydraulic-shearing-root .ex_label p {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* --- Modern Product Hero Section Styles (match Edge Series) --- */
+.hero-container {
+  padding-top: 32px;
+}
+
+.cnc_hero_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(163, 198, 74, 0.10), 0 2px 8px rgba(0,0,0,0.08);
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cnc_hero_image_wrapper {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+
+#cnc_logo_img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  background: #f9f9f9;
+  display: block;
+  margin: 0 auto;
+}
+
+.cnc_text_section {
+  flex: 0 0 50%;
+  background-color: #A5C847;
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  box-shadow: 0 4px 24px rgba(163, 198, 74, 0.10);
+}
+
+.cnc_description {
+  background-color: #4D4F48;
+  color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#CNC_label_text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+#CNC_sub_label_text {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.edge-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.edge-hero-btn {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  text-decoration: none;
+}
+
+.edge-hero-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-2px) scale(1.03);
+  color: #000;
+}
+
+.edge-hero-btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 1200px) {
+  .cnc_hero_section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  .cnc_hero_image_wrapper, .cnc_text_section {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+  }
+  .cnc_text_section {
+    padding: 2rem 1.2rem;
+  }
+  #cnc_logo_img {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cnc_hero_section {
+    padding: 1.2rem 0.5rem;
+    gap: 1.2rem;
+  }
+  .cnc_text_section {
+    padding: 1.2rem 0.7rem;
+    border-radius: 10px;
+  }
+  .cnc_description {
+    padding: 1.2rem 0.7rem;
+    border-radius: 8px;
+  }
+  #CNC_label_text {
+    font-size: 1.2rem;
+  }
+  #CNC_sub_label_text {
+    font-size: 0.95rem;
+  }
+  #cnc_logo_img {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cnc_hero_section {
+    flex-direction: column-reverse !important;
+    padding: 0.5rem 0.2rem;
+    gap: 0.5rem;
+  }
+  .cnc_text_section {
+    padding: 0.7rem 0.3rem;
+    border-radius: 8px;
+  }
+  .cnc_description {
+    padding: 0.7rem 0.3rem;
+    border-radius: 6px;
+  }
+  #CNC_label_text {
+    font-size: 1rem;
+  }
+  #CNC_sub_label_text {
+    font-size: 0.85rem;
+  }
+  #cnc_logo_img {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto 1rem auto;
+    display: block;
+    position: static;
+    box-sizing: border-box;
+    object-fit: contain;
+  }
+}
+
+.hydraulic-shearing-root .cnc_hero_section.modern-hero {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+}
+.hydraulic-shearing-root .cnc_hero_image_wrapper {
+  flex: 0 0 54%;
+  max-width: 54%;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+.hydraulic-shearing-root #cnc_logo_img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 24px rgba(0,0,0,0.08); */
+  background: #f9f9f9;
+}
+.hydraulic-shearing-root .cnc_text_section.modern-hero-card {
+  flex: 0 0 42%;
+  max-width: 42%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #A5C847;
+  border-radius: 12px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  min-height: 420px;
+}
+
+.hydraulic-shearing-root #CNC_label_text {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hydraulic-shearing-root #CNC_sub_label_text {
+  font-size: 1.05rem;
+  opacity: 0.92;
+  font-weight: 500;
+}
+
+.hydraulic-shearing-root .edge-hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 100%;
+  align-items: center;
+  margin-top: 0.5rem;
+  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.5s both;
+}
+
+.hydraulic-shearing-root .edge-hero-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #d2eeb2 0%, #a3c64a 100%);
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  padding: 1.1rem 2.2rem;
+  box-shadow: 0 4px 24px rgba(163,198,74,0.18), 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 420px;
+  min-width: 220px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  text-decoration: none;
+  margin: 0 auto;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hydraulic-shearing-root .edge-hero-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(163,198,74,0.10);
+}
+
+.hydraulic-shearing-root .edge-hero-btn:hover {
+  background: linear-gradient(90deg, #a3c64a 0%, #d2eeb2 100%);
+  color: #333;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(163,198,74,0.18), 0 4px 16px rgba(0,0,0,0.13);
+}
+
+.hydraulic-shearing-root .edge-hero-btn-icon {
+  filter: invert(0.2);
+  margin-left: 1.5rem;
+  width: 2.1rem !important;
+  height: 2.1rem !important;
+  transition: transform 0.2s;
+}
+
+.hydraulic-shearing-root .edge-hero-btn:hover .edge-hero-btn-icon {
+  transform: scale(1.15) rotate(-8deg);
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .hydraulic-shearing-root {
+    margin-top: 80px;
+  }
+  .hydraulic-shearing-root .cnc_hero_section,
+  .hydraulic-shearing-root .modern-hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: unset;
+    padding: 1.2rem 0.5rem;
+    margin-top: 60px;
+    max-width: 100%;
+  }
+  .hydraulic-shearing-root .cnc_hero_image_wrapper,
+  .hydraulic-shearing-root .cnc_text_section,
+  .hydraulic-shearing-root .modern-hero-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+  .hydraulic-shearing-root .cnc_text_section,
+  .hydraulic-shearing-root .modern-hero-card {
+    margin-top: 1.5rem;
+    padding: 2rem 0.7rem 1.5rem 0.7rem;
+  }
+  .hydraulic-shearing-root #cnc_logo_img {
+    max-width: 95vw;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .hydraulic-shearing-root {
+    margin-top: 60px;
+  }
+  .hydraulic-shearing-root .cnc_hero_section,
+  .hydraulic-shearing-root .modern-hero {
+    padding: 0.5rem 0.1rem;
+    gap: 0.7rem;
+    margin-top: 50px;
+  }
+  .hydraulic-shearing-root #cnc_logo_img {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    border-radius: 7px;
+  }
+}
+
+/* Responsive and other sections will be continued as needed */
+
+.hydraulic-shearing-root .modern-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  margin-bottom: 2.5rem;
+  background: #f8f8f8;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(163,198,74,0.07);
+  min-height: 420px;
+  overflow: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.hydraulic-shearing-root .modern-hero-card {
+  background: linear-gradient(135deg, #a3c64a 80%, #d2eeb2 100%);
+  box-shadow: 0 8px 32px rgba(163,198,74,0.10);
+  border-radius: 18px;
+  padding: 3.5rem 2.5rem 3rem 2.5rem;
+  max-width: 520px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.hydraulic-shearing-root .modern-hero-title {
+  background: #444;
+  color: white;
+  padding: 2.2rem 2rem 1.2rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2.2rem;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.hydraulic-shearing-root .img-content-main {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.hydraulic-shearing-root .img-content-left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.hydraulic-shearing-root .img-content-right {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.hydraulic-shearing-root .img-content-main-img {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 1.2rem;
+}
+.hydraulic-shearing-root .img-content-main-img img,
+.hydraulic-shearing-root .img-content-main-img .next-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.hydraulic-shearing-root .img-content-sub-imgs {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  width: 100%;
+  justify-content: center;
+}
+.hydraulic-shearing-root .img-content-sub-imgs img {
+  width: 100%;
+  max-width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.hydraulic-shearing-root .excellence-contain img {
+  object-fit: contain !important;
+  background: #fff;
+}
+@media (max-width: 1100px) {
+  .hydraulic-shearing-root .modern-hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: unset;
+    padding: 1.2rem 0.5rem;
+  }
+  .hydraulic-shearing-root .modern-hero-card {
+    margin-top: 1.5rem;
+    padding: 2rem 0.7rem 1.5rem 0.7rem;
+    max-width: 98vw;
+    min-width: 0;
+  }
+  .hydraulic-shearing-root .img-content-main {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .hydraulic-shearing-root .img-content-main-img {
+    max-width: 95vw;
+  }
+  .hydraulic-shearing-root .img-content-sub-imgs {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+  }
+  .hydraulic-shearing-root .img-content-sub-imgs img {
+    max-width: 95vw;
+    height: 100px;
+  }
+}
+@media (max-width: 700px) {
+  .hydraulic-shearing-root .modern-hero-title {
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  }
+  .hydraulic-shearing-root .img-content-main {
+    padding: 0.7rem 0.2rem;
+    gap: 0.7rem;
+  }
+}
+
+.hydraulic-shearing-root #calc_img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+@media (max-width: 1200px) {
+  .hydraulic-shearing-root #calc_img {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 700px) {
+  .hydraulic-shearing-root #calc_img {
+    max-width: 100vw;
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+}
+
+.hydraulic-shearing-root .img_and_data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.hydraulic-shearing-root .Datapart_main_part {
+  flex: 1 1 55%;
+}
+.hydraulic-shearing-root .img_and_data_imgwrap {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.hydraulic-shearing-root .img_and_data_imgwrap img,
+.hydraulic-shearing-root .img_and_data_imgwrap .next-image {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 900px) {
+  .hydraulic-shearing-root .img_and_data_imgwrap img,
+  .hydraulic-shearing-root .img_and_data_imgwrap .next-image {
+    max-width: 98vw;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .hydraulic-shearing-root .img_and_data {
+    padding: 0.7rem 0.2rem;
+  }
+  .hydraulic-shearing-root .Datapart_main_part {
+    padding-bottom: 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .hydraulic-shearing-root .img_and_data_imgwrap img,
+  .hydraulic-shearing-root .img_and_data_imgwrap .next-image {
+    max-width: 100vw;
+    width: 100vw;
+    height: auto;
+    border-radius: 7px;
+  }
+  .hydraulic-shearing-root .img_and_data {
+    padding: 0.3rem 0.1rem;
+    gap: 0.5rem;
+  }
+  .hydraulic-shearing-root .Datapart_main_part {
+    padding-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .img_and_data.responsive-stack {
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+  .img_and_data.responsive-stack .Datapart_main_part {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .img_and_data.responsive-stack .img_and_data_imgwrap {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .img_and_data.responsive-stack .img_and_data_imgwrap img,
+  .img_and_data.responsive-stack .img_and_data_imgwrap .next-image {
+    max-width: 95vw;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hydraulic-shearing-root .cnc_hero_section {
+    flex-direction: column;
+  }
+  .hydraulic-shearing-root .cnc_hero_image_wrapper,
+  .hydraulic-shearing-root .cnc_text_section {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.media-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 180px;
+  max-width: 260px;
+  margin: 0.3rem auto;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.22);
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  box-shadow: 0 2px 12px rgba(163,200,74,0.10);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  cursor: pointer;
+  outline: none;
+  gap: 0.7rem;
+}
+.media-action-btn img, .media-action-btn svg {
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+.media-action-btn:hover, .media-action-btn:focus {
+  background: rgba(255,255,255,0.32);
+  box-shadow: 0 8px 24px rgba(163,200,74,0.22);
+  transform: translateY(-2px) scale(1.03);
+}
+@media screen and (max-width: 600px) {
+  .media-action-btn {
+    font-size: 0.98rem;
+    padding: 0.6rem 0.6rem;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .media-action-btn img, .media-action-btn svg {
+    margin-left: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sharig_images .image_div {
+    gap: 1rem;
+  }
+  .im_label {
+    padding: 1.1rem 0.4rem 0.3rem 1rem;
+    min-height: 220px;
+    max-width: 98vw;
+  }
+  .i_sharing {
+    max-width: 98vw;
+  }
+  .d_label {
+    font-size: 1.1rem;
+    padding: 0.7rem 0 0.7rem 0;
+    margin-top: 0.7rem;
+  }
+}
+
+/* 1. Top padding for 1440px devices */
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .hero-container {
+    padding-top: 48px;
+  }
+}
+
+/* 2. Tablet: Reduce hero image size */
+@media (max-width: 1024px) and (min-width: 601px) {
+  #cnc_logo_img {
+    max-width: 320px;
+  }
+}
+
+/* 3. Small device: Reduce top padding */
+@media (max-width: 480px) {
+  .hero-container {
+    padding-top: 12px;
+  }
+}
+
+/* 4. General: Ensure hero section is always spaced and responsive */
+.hero-container {
+  padding-top: 32px;
+}
+.cnc_hero_section {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 5. SHEARING CONTROLLER section improvements */
+.sharig_images {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2.5rem 0;
+}
+.image_div {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  max-width: 350px;
+  width: 100%;
+}
+.im_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.d_label {
+  background: #A5C847;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  margin-top: 0.8rem;
+  padding: 0.7rem 0 0.7rem 0;
+  width: 100%;
+}
+.shering_data {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.shering_data ul {
+  padding-left: 1.2rem;
+}
+.shering_data ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .sharig_images {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .image_div {
+    max-width: 95vw;
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+}
+

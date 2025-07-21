@@ -1,0 +1,218 @@
+/* Base Styles for Product Page */
+:root {
+  --primary-color: #a3c64a;
+  --secondary-color: #4d4f48;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --bg-light: #f8f9fa;
+  --card-bg: #ffffff;
+  --shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease;
+}
+
+.product-page-container {
+  background-color: var(--bg-light);
+}
+
+/* Hero Section */
+.product-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.product-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+}
+
+.product-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--text-light);
+}
+
+.product-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Fixed height for uniform card size */
+}
+
+.product-card-content {
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows content to fill space */
+}
+
+.product-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.product-card-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1; /* Pushes button to the bottom */
+}
+
+.product-card-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition);
+  align-self: center; /* Centers button horizontally */
+}
+
+.product-card-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-hero-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.3rem;
+  }
+  .product-grid {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0.2rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .product-card-image-wrapper {
+    height: 180px;
+    min-width: 0;
+  }
+  .product-card-content {
+    padding: 1rem 0.5rem;
+  }
+  .product-card-title {
+    font-size: 1.1rem;
+  }
+  .product-card-button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Image loading optimization */
+#first,
+#machine_img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#first[loading],
+#machine_img[loading] {
+  opacity: 0.6;
+}
+
+.machine_desc_part.reverse {
+  flex-direction: row-reverse;
+} 

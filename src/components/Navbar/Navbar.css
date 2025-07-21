@@ -1,0 +1,302 @@
+/* General Navbar Styling */
+:root {
+  --primary-color: #a5c847;
+  --text-dark: #333;
+  --transition-speed: 0.4s;
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: height 0.3s ease;
+}
+
+.navbar-row.scrolled {
+  height: 80px;
+}
+
+.navbar-logo {
+  margin-left: 1.2rem;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo .logo {
+  height: 90px;
+  width: auto;
+  max-width: 180px;
+  max-height: 90px;
+  transition: height 0.3s, max-width 0.3s, max-height 0.3s;
+}
+
+.navbar-row.scrolled .navbar-logo .logo {
+  height: 50px;
+  max-width: 80px;
+  max-height: 60px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-logo .logo {
+    height: 40px;
+    max-width: 80px;
+    max-height: 40px;
+  }
+}
+
+/* Desktop Styles */
+.desktop-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  width: auto;
+  margin-left: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  margin-left: 0;
+}
+
+.navbar-menu li a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navbar-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  color: var(--primary-color);
+}
+
+.navbar-menu li a:hover::after,
+.navbar-menu li a.active::after {
+  width: 100%;
+}
+
+.contact-btn, .contact-btn.active {
+  text-decoration: none !important;
+}
+.contact-btn::after {
+  display: none !important;
+}
+
+/* Mobile & Hamburger Styles */
+.mobile-sidebar {
+  display: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .navbar-row {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-logo {
+    margin-left: 1.2rem;
+    margin-right: 2rem;
+  }
+  .desktop-links, .desktop-contact {
+    display: none;
+  }
+  .menu-toggle {
+    display: block !important;
+    margin-left: auto;
+    margin-right: 1.2rem;
+    order: 2;
+    z-index: 1102;
+  }
+  .navbar-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .mobile-sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 100%;
+    width: 300px;
+    background: #fff;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mobile-sidebar.open {
+    transform: translateX(0);
+  }
+  .close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    left: auto;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+  }
+  .mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 2.2rem;
+    width: 100%;
+  }
+  .mobile-menu li {
+    margin-bottom: 1.1rem;
+    width: 100%;
+  }
+  .mobile-menu li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.2s, background 0.2s, padding 0.2s;
+    display: block;
+    padding: 0.2rem 0 0.2rem 1.2rem;
+    border-radius: 6px;
+    margin-left: 0.2rem;
+    letter-spacing: 0.5px;
+  }
+  .mobile-menu li a.active {
+    color: var(--primary-color);
+    background: rgba(165,200,71,0.08);
+    font-weight: 700;
+  }
+  .mobile-menu li a:hover {
+    color: var(--primary-color);
+    background: rgba(165,200,71,0.13);
+    padding-left: 1.6rem;
+  }
+  .contact-btn-mobile {
+    background: var(--primary-color);
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    display: block;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    width: 95%;
+    margin-left: 2.5%;
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(165,200,71,0.10);
+    letter-spacing: 0.5px;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .contact-btn-mobile:hover {
+    background: #8db035;
+    box-shadow: 0 8px 24px rgba(165,200,71,0.18);
+  }
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+  .mobile-sidebar.open ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#contact-me {
+  margin-right: 1.2rem;
+}
+
+#contact-me a {
+  padding: 0.7rem 1.1rem;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  color: #fff !important;
+  border-radius: 6px;
+  transition: all var(--transition-speed) ease;
+  border: none;
+  text-decoration: none !important;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+#contact-me a::after {
+  display: none !important;
+}
+
+.menu-toggle {
+  display: none;
+}
+.menu-toggle .hamburger {
+  width: 32px;
+  height: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-toggle .hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: var(--text-dark);
+  border-radius: 2px;
+  margin: 3px 0;
+  transition: all 0.3s;
+}
+.menu-toggle .hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle .hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle .hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

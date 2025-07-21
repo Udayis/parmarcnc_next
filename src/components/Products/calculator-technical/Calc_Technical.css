@@ -1,0 +1,66 @@
+.calc_technical_section {
+    padding: 4rem 5%;
+    background: #fff;
+}
+
+.calc_technical_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calc_technical_content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.calc_technical_content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.calc_technical_content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+    max-width: 600px;
+}
+
+.calc_technical_image {
+    margin-top: 2rem;
+}
+
+.calc_technical_image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .calc_technical_section {
+        padding: 2rem 3%;
+    }
+
+    .calc_technical_content h2 {
+        font-size: 2rem;
+    }
+
+    .calc_technical_content p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .calc_technical_section {
+        padding: 1.5rem 2%;
+    }
+
+    .calc_technical_content h2 {
+        font-size: 1.8rem;
+    }
+} 

@@ -1,0 +1,143 @@
+/* Import Bootstrap CSS */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-color: #a5c847;
+  --secondary-color: #8db035;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: #fff;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* Custom styles for images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom styles for sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Custom styles for buttons */
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+  border-color: darken(var(--primary-color), 10%);
+}
+
+/* Custom styles for forms */
+.form-control {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Custom styles for cards */
+.card {
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom styles for navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: var(--dark-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Custom styles for responsive design */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.standard_main_components .green-title-box {
+    background: #a3c64a;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5rem 1.2rem;
+    border-radius: 7px;
+    margin: 1.2rem 0 1.2rem 0;
+    font-size: 1.1rem;
+    display: inline-block;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(163,198,74,0.08);
+    text-transform: uppercase;
+}
+
+.standard_main_components .green-title-underline {
+    position: relative;
+}
+
+.standard_main_components .green-title-underline::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: #fff;
+    margin: 0.4rem auto 0 auto;
+    border-radius: 2px;
+} 

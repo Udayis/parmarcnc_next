@@ -1,0 +1,396 @@
+/* Page Container */
+.page-container {
+  min-height: 100vh;
+  opacity: 0;
+  margin-top: 9.5%;
+  animation: fadeInPage 1s ease-out forwards;
+}
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.1) rotateX(5deg);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.9);
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.hero-section:hover .hero-background {
+  transform: scale(1) rotateX(0);
+  filter: brightness(1);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  top: 15%;
+}
+
+.hero-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2.0rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, letter-spacing;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.hero-title:hover {
+  transform: translateZ(50px);
+  letter-spacing: 3rem;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Download Section */
+.Down_part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem 5vw;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.download_img_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 320px;
+  min-width: 220px;
+  max-width: 360px;
+  margin: 2rem 1.5vw;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2.2rem 1.2rem 1.5rem 1.2rem;
+}
+
+.download_img_part.download_card_link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.25s, transform 0.18s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  outline: none;
+}
+.download_img_part.download_card_link:hover,
+.download_img_part.download_card_link:focus {
+  box-shadow: 0 8px 32px rgba(163,200,74,0.18), 0 2px 12px rgba(0,0,0,0.10);
+  transform: translateY(-4px) scale(1.03);
+  background: #f8fbe9;
+}
+.download_card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.download_card_pdf_icon {
+  display: block;
+  margin: 0 auto 2.2rem auto;
+  max-width: 120px;
+  max-height: 120px;
+  width: 40%;
+  height: auto;
+}
+.download_card_btn {
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1.1rem 2rem;
+  border-radius: 12px;
+  background: #A5C847;
+  box-shadow: 0 2px 12px rgba(163,200,74,0.10);
+  display: flex;
+  align-items: center;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.download_card_btn:hover,
+.download_card_btn:focus {
+  background: #8bbf2a;
+  box-shadow: 0 8px 24px rgba(163,200,74,0.22);
+  transform: scale(1.03);
+}
+
+/* Download Button */
+.download_btn {
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #A5C847;
+  box-shadow: 0 2px 12px rgba(163,200,74,0.10);
+  padding: 1.1rem 2rem;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+
+.download_btn:hover {
+  background: #8bbf2a;
+  box-shadow: 0 8px 24px rgba(163,200,74,0.22);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.download_text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.18s;
+}
+
+#do_icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 1.5rem;
+  }
+  .download_text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 40vh;
+  }
+  .page-container {
+    margin-top: 8%;
+  }
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+  .download_text {
+    font-size: 1.4rem;
+  }
+  #do_icon {
+    width: 20px;
+    height: 20px;
+  }
+  .download_btn {
+    gap: 8%;
+  }
+  .Down_part {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .download_img_part {
+    transform: translate(0, 0);
+  }
+  .download_img_part:hover {
+    transform: translate(0, -10px);
+  }
+  .download_img_part.download_card_link {
+    width: 98vw;
+    max-width: 98vw;
+    margin: 1.2rem 0;
+    padding: 1.1rem 0.4rem 1rem 0.4rem;
+  }
+  .download_card_pdf_icon {
+    max-width: 80px;
+    margin-bottom: 1.2rem;
+  }
+  .download_card_btn {
+    padding: 0.7rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .download_text {
+    font-size: 1.2rem;
+  }
+  #do_icon {
+    width: 16px;
+    height: 16px;
+  }
+  .download_btn {
+    width: 80%;
+    padding: 1.5% 0;
+  }
+  .hero-content {
+    top: 20%;
+  }
+  .download_img_part.download_card_link {
+    width: 98vw;
+    max-width: 98vw;
+    margin: 0.7rem 0;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .download_card_pdf_icon {
+    max-width: 60px;
+    margin-bottom: 0.7rem;
+  }
+  .download_card_btn {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) translateZ(0); }
+  100% { transform: rotate(360deg) translateZ(0); }
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.download_text {
+  transition: all 0.3s ease;
+}
+
+.download_text.downloading {
+  color: #3498db;
+  cursor: wait;
+}
+
+.download_text.success {
+  color: #2ecc71;
+}
+
+.download_text.error {
+  color: #e74c3c;
+}
+
+.download_btn {
+  transition: all 0.3s ease;
+}
+
+.download_btn:hover {
+  transform: scale(1.05);
+}
+
+.download_btn:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+  .download_btn {
+    padding: 0.7rem 1rem;
+    max-width: 98vw;
+  }
+  .download_text {
+    font-size: 1rem;
+    margin-left: 0.7rem;
+  }
+  #do_icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Down_part {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem 0;
+  }
+  .download_img_part {
+    width: 98vw;
+    max-width: 98vw;
+    margin: 1.2rem 0;
+    padding: 1.1rem 0.4rem 1rem 0.4rem;
+  }
+} 

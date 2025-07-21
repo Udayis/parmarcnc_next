@@ -1,0 +1,144 @@
+/* Mobile button fix styles for the first slide's button */
+@media screen and (max-width: 767px) {
+  /* Make sure the hero slide container allows proper positioning */
+  .hero_slide:first-child {
+    position: relative !important;
+    min-height: 100vh !important;
+  }
+  
+  /* Position the first slide button above the hero dots */
+  .hero_slide:first-child.active button#first_slide_explore_btn.first-slide-mobile-btn {
+    position: absolute !important;
+    bottom: 120px !important; /* Position above the hero dots */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 auto !important;
+    max-width: 280px !important;
+    width: 80% !important;
+    padding: 15px 30px !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    z-index: 9999 !important;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    display: block !important;
+    border: none !important;
+    border-radius: 4px !important;
+  }
+  
+  /* Fix hero navigation position */
+  .hero_navigation {
+    bottom: 60px !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  
+  /* Fix hero dots styling */
+  .hero_dots {
+    display: flex !important;
+    gap: 8px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero_dot {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .hero_dot.active {
+    background: var(--primary-color) !important;
+    transform: scale(1.2) !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  /* Hide the button in its original location */
+  .hero_slide:first-child .hero_text .hero_button.first-slide-mobile-btn {
+    display: none !important;
+  }
+  
+  /* Make sure button is shown only for the first slide */
+  .hero_slide:not(.active) button#first_slide_explore_btn,
+  .hero_slide:not(:first-child) button#first_slide_explore_btn {
+    display: none !important;
+  }
+  
+  /* Hide the arrow buttons on mobile */
+  .hero_arrow {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero_slide:first-child.active button#first_slide_explore_btn.first-slide-mobile-btn {
+    bottom: -115px !important;
+    min-width: 180px !important;
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .hero_navigation {
+    bottom: 50px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero_slide:first-child.active button#first_slide_explore_btn.first-slide-mobile-btn {
+    bottom: -115px !important;
+    min-width: 160px !important;
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .hero_navigation {
+    bottom: 40px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero_slide:first-child.active button#first_slide_explore_btn.first-slide-mobile-btn {
+    bottom: -115px !important;
+    min-width: 140px !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .hero_navigation {
+    bottom: 30px !important;
+  }
+}
+
+/* iPhone-specific styles */
+@media screen and (device-width: 375px) and (device-height: 667px),
+       screen and (device-width: 390px) and (device-height: 844px),
+       screen and (device-width: 428px) and (device-height: 926px),
+       screen and (device-width: 430px) and (device-height: 932px),
+       screen and (device-width: 393px) and (device-height: 852px) {
+  .hero_slide:first-child.active button#first_slide_explore_btn.first-slide-mobile-btn {
+    bottom: -140px !important;
+    min-width: 170px !important;
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
+    left: calc(50% - 10px) !important; /* Adjust for left padding */
+  }
+  
+  .hero_navigation {
+    bottom: 40px !important;
+  }
+  
+  .overlap_1 {
+    padding: 5% 10px 5% 10px !important;
+  }
+} 

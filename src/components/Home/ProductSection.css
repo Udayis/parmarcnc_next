@@ -1,0 +1,220 @@
+/* Product Section Styles */
+.product-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f9f9f9 60%, #e8f5c8 100%);
+    min-height: 100vh;
+  }
+  
+  .product-section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+  
+  .product-section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #A3C64A;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px;
+    padding: 0 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    flex: 0 0 calc(33.333% - 24px);
+    max-width: calc(33.333% - 24px);
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(163, 198, 74, 0.08);
+    border-radius: 18px;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s cubic-bezier(.4,2,.6,1);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+  }
+  
+  .product-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 80%;
+    height: 30px;
+    background: radial-gradient(ellipse at center, #a3c64a33 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 32px 0 #a3c64a22, 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .product-card:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -30%) scale(1);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+    box-shadow: none;
+    background: #fff;
+  }
+  
+  .product-image img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s cubic-bezier(.4,2,.6,1);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .product-card:hover .product-image img {
+    transform: scale(1.04);
+    box-shadow: none;
+  }
+  
+  .product-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.4;
+  }
+  
+  /* Arrow pulse animation */
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 #a3c64a44; }
+    70% { transform: scale(1.15); box-shadow: 0 0 0 8px #a3c64a11; }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 #a3c64a44; }
+  }
+  
+  .nav-circle {
+    display: block;
+    margin: 18px auto 0 auto;
+    position: static;
+    background: #a3c64a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 8px #a3c64a22;
+    transition: background 0.2s, color 0.2s;
+    outline: none;
+    cursor: pointer;
+    line-height: 38px;
+  }
+  
+  .nav-circle::before,
+  .nav-circle::after {
+    content: "";
+  }
+  
+  .product-card:hover .nav-circle {
+    background: #8bbf2f;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .product-grid {
+      padding: 0 40px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .product-card {
+      flex: 0 0 calc(50% - 15px);
+      max-width: calc(50% - 15px);
+    }
+    
+    .product-image {
+      height: 260px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-section-title {
+      font-size: 2rem;
+    }
+    
+    .product-section-title::after {
+      width: 60px;
+    }
+    
+    .product-grid {
+      padding: 0 20px;
+      gap: 20px;
+    }
+    
+    .product-image {
+      height: 240px;
+    }
+    
+    .nav-circle {
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+      line-height: 32px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .product-section-title {
+      font-size: 1.8rem;
+    }
+    
+    .product-section-title::after {
+      width: 50px;
+    }
+    
+    .product-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    .product-title {
+      font-size: 0.9rem;
+    }
+    
+    .product-image {
+      height: 220px;
+    }
+    
+    .nav-circle {
+      width: 26px;
+      height: 26px;
+      font-size: 0.9rem;
+      line-height: 26px;
+    }
+  } 

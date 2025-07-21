@@ -1,0 +1,1801 @@
+/**
+ * Parmar CNC - CNC Controller Component Styles
+ * Version: 1.0
+ */
+
+/* ==========================================================================
+   1. Component Variables
+   ========================================================================== */
+:root {
+    --primary-color: #a5c847;
+    --secondary-color: var(--secondary-color);
+    --accent-color: #e74c3c;
+    --text-color: #ecf0f1;
+    --highlight-color: var(--color);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.5s ease;
+    --transition-slow: 0.8s ease;
+    --controller-bg: #f5f5f5;
+    --controller-text: #333333;
+    --controller-border: #dddddd;
+    --controller-shadow: rgba(0, 0, 0, 0.1);
+    --controller-hover: rgba(163, 198, 74, 0.1);
+}
+
+/* ==========================================================================
+   2. Controller Layout & Structure
+   ========================================================================== */
+.controller_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ==========================================================================
+   3. Controller Headers & Labels
+   ========================================================================== */
+#delem_label,
+#standard_label,
+#edge_label,
+#crowningheavy_label,
+#hydraulic_c,
+#std_label,
+#accessories_label {
+    background: #a3c64a !important;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0.6rem 0.5rem;
+    border-radius: 7px;
+    margin: 2rem 0 1.5rem 0;
+    box-shadow: 0 4px 18px rgba(163,198,74,0.10);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   4. Standard Components Color Overrides (Only for Standard Components)
+   ========================================================================== */
+.standard_main_components #standard_label {
+    background: #a3c64a !important;
+    color: white !important;
+}
+
+.standard_main_components .tool_holder_part #de_text,
+.standard_main_components .wila_tool_holder #de_text {
+    color: #a3c64a !important;
+    background: transparent !important;
+}
+
+.standard_main_components .img_container p {
+    color: #333 !important;
+}
+
+.standard_main_components .im-1 p {
+    color: #333 !important;
+}
+
+/* ==========================================================================
+   5. Delem, Step, and Cybelec Hover Effects
+   ========================================================================== */
+/* Remove background effects and keep only text color changes */
+.delem_main_container .machine_two_pair,
+.step_main_container .machine_two_pair,
+.cybelic_main_part .machine_two_pair {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2.5rem;
+    padding: 2rem 1.5rem;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.7s cubic-bezier(0.4,0.2,0.2,1) forwards;
+    animation-delay: 0.2s;
+}
+
+.delem_main_container .machine_two_pair:hover,
+.step_main_container .machine_two_pair:hover,
+.cybelic_main_part .machine_two_pair:hover {
+    box-shadow: 0 8px 32px rgba(163,198,74,0.18), 0 2px 12px rgba(0,0,0,0.10);
+    transform: translateY(-8px) scale(1.025);
+    background: linear-gradient(120deg, #f8ffe8 0%, #e6f7d4 100%);
+}
+
+.delem_main_container #label_of_machine,
+.step_main_container #label_of_machine,
+.cybelic_main_part #label_of_machine {
+    background: transparent !important;
+    color: black !important;
+    transition: all var(--transition-medium);
+}
+
+.delem_main_container .machine_two_pair:hover #label_of_machine,
+.step_main_container .machine_two_pair:hover #label_of_machine,
+.cybelic_main_part .machine_two_pair:hover #label_of_machine {
+    background: transparent !important;
+    color: var(--primary-color) !important;
+}
+
+/* Individual feature line hover effect for Delem, Step, Cybelec */
+.delem_main_container .desc_of_machine ul,
+.step_main_container .desc_of_machine ul,
+.cybelic_main_part .desc_of_machine ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.delem_main_container .desc_of_machine ul li,
+.step_main_container .desc_of_machine ul li,
+.cybelic_main_part .desc_of_machine ul li {
+    color: black !important;
+    transition: all var(--transition-medium);
+    margin-bottom: 0.8rem;
+    padding-left: 0.2em;
+}
+
+.delem_main_container .desc_of_machine ul li:hover,
+.step_main_container .desc_of_machine ul li:hover,
+.cybelic_main_part .desc_of_machine ul li:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ==========================================================================
+   5. Controller Sections
+   ========================================================================== */
+/* 5.1 Cybelic Section */
+.cybelic_main_part {
+    margin-top: 9.5%;
+}
+
+/* 5.2 Step Section */
+.step_main_container {
+    margin-top: 9.5%;
+}
+
+/* ==========================================================================
+   6. Responsive Design
+   ========================================================================== */
+/* 6.1 Large Screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+    .controller_container {
+        padding: 3rem;
+    }
+}
+
+/* 6.2 Laptop/Desktop (1024px - 1199px) */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .controller_container {
+        padding: 2.5rem;
+    }
+}
+
+/* 6.3 Tablets (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .controller_container {
+        padding: 2rem;
+    }
+
+    #delem_label,
+    #standard_label,
+    #edge_label,
+    #crowningheavy_label,
+    #hydraulic_c,
+    #std_label,
+    #accessories_label {
+        font-size: 1.3rem;
+        margin: 0.8rem;
+    }
+}
+
+/* 6.4 Mobile Devices (up to 767px) */
+@media screen and (max-width: 767px) {
+    .controller_container {
+        padding: 1.5rem;
+    }
+
+    #delem_label,
+    #standard_label,
+    #edge_label,
+    #crowningheavy_label,
+    #hydraulic_c,
+    #std_label,
+    #accessories_label {
+        font-size: 1.1rem;
+        margin: 0.6rem;
+        padding: 0.4rem;
+    }
+
+    .cybelic_main_part,
+    .step_main_container {
+        margin-top: 12%;
+    }
+}
+
+/* 6.5 Small Mobile Devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    .controller_container {
+        padding: 1rem;
+    }
+
+    #delem_label,
+    #standard_label,
+    #edge_label,
+    #crowningheavy_label,
+    #hydraulic_c,
+    #std_label,
+    #accessories_label {
+        font-size: 1rem;
+        margin: 0.5rem;
+        padding: 0.3rem;
+        letter-spacing: 1px;
+    }
+
+    .cybelic_main_part,
+    .step_main_container {
+        margin-top: 15%;
+    }
+}
+
+/* ==========================================================================
+   7. Animations & Transitions
+   ========================================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Global Animation Classes */
+.slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.zoom-in {
+    animation: zoomIn 0.6s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Enhanced Controller Section */
+.conroller_main_controller {
+    margin: 1%;
+    perspective: 1000px;
+}
+
+#cnc_label {
+    background: var(--color);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+/* #cnc_label::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    transform: rotate(30deg);
+    transition: all var(--transition-slow);
+  } */
+
+/* #cnc_label:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px var(--shadow-color);
+  } */
+
+/* #cnc_label:hover::before {
+    transform: rotate(30deg) translate(20%, 20%);
+  } */
+
+.delem_Cybelic_part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.delem_part, .cybelic_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+    padding: 2rem;
+    width: 49%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.delem_part::before, .cybelic_div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--highlight-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-medium);
+}
+
+.delem_part:hover, .cybelic_div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.delem_part:hover::before, .cybelic_div:hover::before {
+    transform: scaleX(1);
+}
+
+.delem_part img, .cybelic_div img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: all var(--transition-medium);
+}
+
+.delem_part:hover img, .cybelic_div:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.delem_desc, .cybelic_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#machine_text_label {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: all var(--transition-medium);
+}
+
+#machine_text_label:hover {
+    transform: translateY(-2px);
+}
+
+#label_btn {
+    background: #a5c847;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+#label_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all var(--transition-slow);
+}
+
+#label_btn:hover {
+    /* background: darken(var(--accent-color), 10%); */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#label_btn:hover::before {
+    left: 100%;
+}
+
+/* Enhanced Delem/Cybelic/Step Components */
+.delem_main_container{
+    margin-top: 9.5%;
+}
+.cybelic_main_part, .step_main_container {
+    margin-top: 9.5%;
+}
+.delem_main_div, .cybelic_main_part, .step_main_container {
+    background: var(--secondary-color);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.machine_mega_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.machine_two_pair {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    width: 45%;
+    min-height: 500px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-radius: 8px;
+    transition: all var(--transition-medium);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.machine_two_pair:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    /* background: rgba(255, 255, 255, 0.15); */
+}
+
+#label_of_machine {
+    background: var(--primary-color);
+    width: 80%;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    transition: all var(--transition-medium);
+}
+
+/* #label_of_machine:hover {
+    background: var(--highlight-color);
+} */
+
+#img_of_machine {
+    width: 60%;
+    max-width: 320px;
+    min-width: 180px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: box-shadow 0.3s;
+}
+
+.delem_main_container .machine_two_pair:hover #img_of_machine,
+.step_main_container .machine_two_pair:hover #img_of_machine,
+.cybelic_main_part .machine_two_pair:hover #img_of_machine {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transform: rotate(0deg) scale(1.10);
+}
+
+.desc_of_machine {
+    width: 80%;
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.desc_of_machine ul {
+    padding-left: 1.5rem;
+}
+
+.desc_of_machine ul li {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.desc_of_machine ul li::before {
+    /* content: '→'; */
+    position: absolute;
+    left: -1.5rem;
+    color: var(--highlight-color);
+    transition: all var(--transition-fast);
+}
+
+.desc_of_machine ul li:hover {
+    color: var(--highlight-color);
+    transform: translateX(5px);
+}
+
+.desc_of_machine ul li:hover::before {
+    transform: translateX(-5px);
+}
+
+/* Enhanced Standard Components */
+.standard_main_components {
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+.tool_holder_part,.wila_tool_holder {
+    background: var(--secondary-color);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#de_text{
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+    background: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: all var(--transition-medium);
+    width: 50%;
+}
+
+#de_text:hover, .tag_name p:hover {
+    background: var(--highlight-color);
+    transform: translateY(-3px);
+}
+
+.img_pa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.img_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-medium);
+}
+
+.img_container:hover {
+    transform: translateY(-5px);
+}
+
+.img_container img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: all var(--transition-medium);
+}
+
+/* .img_container:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+} */
+
+.img_container p {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all var(--transition-medium);
+}
+.will_imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* or space-between/space-around as per your design */
+    align-items: center;
+    gap: 20px; /* adjust as needed */
+    margin-top: 2rem;
+}
+
+/* For mobile devices - stack in column */
+@media (max-width: 768px) { /* adjust breakpoint as needed */
+    .will_imgs {
+        flex-direction: column;
+    }
+    
+    .will_imgs .im-1 {
+        width: 100%; /* makes each child take full width */
+        margin-bottom: 15px; /* space between stacked items */
+    }
+    
+    #img_2_will_tool {
+        margin-bottom: 0; /* remove bottom margin from last item if needed */
+    }
+}
+
+/* For larger screens - display in row */
+@media (min-width: 769px) {
+    .will_imgs {
+        flex-direction: row;
+    }
+    
+    .will_imgs .im-1 {
+        flex: 1; /* makes items share space equally */
+        max-width: 50%; /* or adjust as needed */
+    }
+}
+.im-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-medium);
+}
+.im-1:hover{
+    transform: translateY(-5px);
+}
+/* Optional: Style for images and text */
+.will_imgs .im-1 img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+}
+
+.will_imgs .im-1 p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px; /* adjust as needed */
+    color: white;
+}
+
+/* Enhanced Bending Tools */
+.edge_tools_part {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+}
+
+.parmar_part {
+    background: var(--secondary-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.parmar_part img {
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: all var(--transition-medium);
+}
+
+.parmar_part:hover img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.text_part p {
+    font-size: 1.2rem;
+    text-align: justify;
+    color: white;
+    line-height: 1.6;
+}
+
+.punch_part, .die_part {
+    background: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+#label_header {
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#label_header::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--highlight-color);
+}
+
+.imgs, .die_img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.im, .die {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all var(--transition-medium);
+}
+
+.im:hover, .die:hover {
+    transform: translateY(-10px);
+}
+
+.im img, .die img {
+    width: 50%;
+    height: 100px;
+    /* height: auto; */
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    transition: all var(--transition-medium);
+}
+
+.im:hover img, .die:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.im p, .die p {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+}
+
+/* Common Section Styles */
+/* [id$="_label"],
+[id$="_c"] {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 2rem 0;
+  position: relative;
+  padding-bottom: 1rem;
+  animation: fadeInDown 1s ease;
+} */
+
+/* [id$="_label"]::after,
+[id$="_c"]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+} */
+
+/* CNC Crowning & Heavy Tools Section */
+.CNC_crowning_and_heavy_tools {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 0 20px 10px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px;
+    width: 97.5%;
+}
+
+.heavy_part {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease;
+}
+
+.heavy_desc {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+#front {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(76, 125, 60, 1);
+    margin-bottom: 1rem;
+    /* background-color: white; */
+}
+
+#frout_text {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.8;
+}
+
+.heavy_img {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.heavy_img:hover {
+    transform: translateY(-10px);
+}
+
+.heavy_img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#heavy {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: rgba(76, 125, 60, 1);
+}
+
+/* H Series Styles */
+.h_series, .h_series_1 {
+    margin: 3rem 0;
+    animation: fadeInUp 1s ease;
+}
+
+.heading_part {
+    margin-bottom: 2rem;
+}
+
+#Edge_h {
+    font-size: 2rem;
+    color:rgba(76, 125, 60, 1);;
+    font-weight: 700;
+}
+
+#edge_b {
+    font-size: 1.5rem;
+    color: rgba(114, 114, 113, 1);
+    font-weight: 600;
+}
+
+.h_series_img_part {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 2rem;
+    /* padding: 0% 3%; */
+}
+
+.h_img, .h_img_1 {
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+    transition: all 0.3s ease;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h_img:hover, .h_img_1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.h_img img, .h_img_1 img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.h_img p, .h_img_1 p {
+    /* padding: 15px; */
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+.h_series_img_part_1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    margin-top: 2rem;
+    /* padding: 0% 3%; */
+}
+
+/* Hydraulic Components */
+.h_components {
+    margin: 0 auto;
+    padding: 0 20px 10px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px;
+    width: 97.5%;
+}
+
+.h_system {
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#h_s_tag {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: var(--color);
+    width: 40%;
+    margin-top: 1rem;
+}
+
+.h_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.h_im_1 {
+    flex: 1;
+    min-width: 300px;
+    background: var(--color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.h_im_1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.h_im_1 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.h_im_1 p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color:white;;
+}
+/* beak line  */
+.hydro_part {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.hy_img_part {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.hy_img_part:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.hy_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hy_img_p_1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#d_img_part {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    background: var(--color);
+    transform: translateY(-12%);
+}
+
+#jj {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Standard Components */
+.std_main_div {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    background-color: var(--secondary-color);
+    width: 97.5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px;
+}
+
+.item_div {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease;
+}
+
+.item_div:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.item_div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.item_div p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    background-color: var(--color);
+    transform: translateY(-15%);
+}
+
+/* Accessories */
+.std_part_2 {
+    gap: 30px;
+    background-color: var(--secondary-color);
+    width: 97.5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.std_2 {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 100px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.img_std_2 {
+    flex: 1;
+    min-width: 300px;
+    background: var(--color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.img_std_2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.img_std_2 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.tag_2 p {
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    [id$="_label"],
+    [id$="_c"] {
+        font-size: 2rem;
+    }
+    
+    .heavy_part {
+        flex-direction: column;
+    }
+    
+    .h_series_img_part,
+    .h_series_img_part_1 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .hydro_part {
+        grid-template-columns: 1fr;
+    }
+    
+    .std_main_div {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    [id$="_label"],
+    [id$="_c"] {
+        font-size: 1.8rem;
+    }
+    
+    .h_series_img_part,
+    .h_series_img_part_1 {
+        grid-template-columns: 1fr;
+    }
+    
+    .h_images {
+        flex-direction: column;
+    }
+    
+    .h_im_1 {
+        min-width: 100%;
+    }
+}
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .machine_two_pair {
+        width: 100%;
+    }
+    
+    .im, .die {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .delem_Cybelic_part {
+        flex-direction: column;
+    }
+    
+    .delem_part, .cybelic_div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .machine_mega_div {
+        flex-direction: column;
+    }
+    
+    .machine_two_pair {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .h_images {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #h_s_tag {
+        width: 90%;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #cnc_label, #delem_label, #standard_label, #edge_label, 
+    #crowningheavy_label, #hydraulic_c, #std_label, 
+    #accessories_label {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+    
+    .dark-title-box {
+        font-size: 1rem;
+        min-width: auto;
+        padding: 0.6rem 1rem;
+    }
+    
+    #label_btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .img_container, .im, .die {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .delem_part, .cybelic_div {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        align-items: center;
+    }
+
+    .delem_part img, .cybelic_div img {
+        width: 60%;
+        max-width: 220px;
+        height: auto;
+        order: 1; /* Ensure image is first */
+    }
+
+    .delem_desc, .cybelic_desc {
+        order: 2; /* Ensure description is second */
+        width: 100%;
+        align-items: center;
+    }
+
+    .cybelic_div img {
+        order: 1; /* Keep consistency for Cybelec */
+    }
+
+    .cybelic_desc {
+        order: 2; /* Keep consistency for Cybelec */
+    }
+}
+
+/* Responsive styles for CNC Controller components */
+@media screen and (max-width: 1024px) {
+    .delem_main_div, .cybelic_main_part {
+        padding: 1rem;
+    }
+
+    .machine_mega_div {
+        margin: 1rem 0;
+    }
+
+    .machine_two_pair {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    #img_of_machine {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .desc_of_machine {
+        padding: 1rem;
+    }
+
+    .desc_of_machine ul li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .delem_main_container, 
+    .cybelic_main_part, 
+    .step_main_container,
+    .standard_main_components {
+        padding-top: 120px !important;
+        margin-top: 0 !important;
+    }
+
+    .green-title-box {
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .img_pa, .will_imgs, .heavy_part, .h_series_img_part, .h_series_img_part_1, .hydro_part {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .img_container, .im-1, .heavy_desc, .heavy_img, .h_img, .h_img_1, .hy_img_part {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .img_container img, .im-1 img, .heavy_img img, .h_img img, .h_img_1 img, .hy_img_p_1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    #de_text {
+        font-size: 1.3rem;
+    }
+
+    .h_images {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delem_main_container, .cybelic_main_part, .step_main_container {
+        margin-top: 15%;
+    }
+
+    #delem_label, #standard_label {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .machine_mega_div {
+        gap: 1.5rem;
+    }
+
+    .machine_two_pair {
+        padding: 0.8rem;
+    }
+
+    #label_of_machine {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    #img_of_machine {
+        max-width: 200px;
+    }
+
+    .desc_of_machine {
+        padding: 0.8rem;
+    }
+
+    .desc_of_machine ul li {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    /* Standard Components mobile styles */
+    .img_container {
+        padding: 0.8rem;
+    }
+
+    .img_container img {
+        max-width: 180px;
+    }
+
+    .img_container p {
+        font-size: 0.8rem;
+    }
+
+    .im-1 img {
+        max-width: 200px;
+    }
+
+    .im-1 p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure images maintain aspect ratio */
+#img_of_machine, .img_container img, .im-1 img {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Improve touch targets on mobile */
+#label_btn, .social-link, .machine_two_pair {
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+/* Optimize text readability on small screens */
+@media screen and (max-width: 360px) {
+    .desc_of_machine ul li {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    #label_of_machine {
+        font-size: 1rem;
+    }
+
+    .img_container p, .im-1 p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive styles for titles */
+@media screen and (min-width: 1024px) {
+    .cybelic_main_part, .step_main_container {
+        margin-top: 9.5%;
+    }
+
+    #delem_label, #standard_label {
+        margin: 1rem auto;
+        max-width: 98%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cybelic_main_part, .step_main_container {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cybelic_main_part, .step_main_container {
+        margin-top: 12%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cybelic_main_part, .step_main_container {
+        margin-top: 15%;
+    }
+}
+
+/* Main title (DELEM, STEP, CYBELEC) green with underline */
+.delem_main_container #delem_label,
+.step_main_container #delem_label,
+.cybelic_main_part #delem_label {
+    color: #a3c64a !important;
+    border-bottom: 3px solid #a3c64a;
+    display: block;
+    padding-bottom: 0.3rem;
+    margin: 0 auto 1.5rem auto;
+    background: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.delem_main_container #delem_label::after,
+.step_main_container #delem_label::after,
+.cybelic_main_part #delem_label::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #a3c64a 0%, #e6f7d4 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    z-index: 2;
+}
+.delem_main_container #delem_label.animated::after,
+.step_main_container #delem_label.animated::after,
+.cybelic_main_part #delem_label.animated::after {
+    width: 100%;
+}
+
+/* Subtle image hover transition for product images */
+.delem_main_container #img_of_machine,
+.step_main_container #img_of_machine,
+.cybelic_main_part #img_of_machine {
+    transition: box-shadow 0.3s, transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform: rotate(-4deg) scale(1);
+}
+
+.delem_main_container .machine_two_pair:hover #img_of_machine,
+.step_main_container .machine_two_pair:hover #img_of_machine,
+.cybelic_main_part .machine_two_pair:hover #img_of_machine {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transform: rotate(0deg) scale(1.10);
+}
+
+/* 1. Card hover: shadow, lift, gradient */
+.delem_main_container .machine_two_pair,
+.step_main_container .machine_two_pair,
+.cybelic_main_part .machine_two_pair {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2.5rem;
+    padding: 2rem 1.5rem;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.7s cubic-bezier(0.4,0.2,0.2,1) forwards;
+    animation-delay: 0.2s;
+}
+
+.delem_main_container .machine_two_pair:hover,
+.step_main_container .machine_two_pair:hover,
+.cybelic_main_part .machine_two_pair:hover {
+    box-shadow: 0 8px 32px rgba(163,198,74,0.18), 0 2px 12px rgba(0,0,0,0.10);
+    transform: translateY(-8px) scale(1.025);
+    background: linear-gradient(120deg, #f8ffe8 0%, #e6f7d4 100%);
+}
+
+/* 2. Animated underline for title */
+.delem_main_container #delem_label,
+.step_main_container #delem_label,
+.cybelic_main_part #delem_label {
+    color: #a3c64a !important;
+    border-bottom: 3px solid #a3c64a;
+    display: block;
+    padding-bottom: 0.3rem;
+    margin: 0 auto 1.5rem auto;
+    background: none !important;
+    box-shadow: none !important;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+.delem_main_container #delem_label::after,
+.step_main_container #delem_label::after,
+.cybelic_main_part #delem_label::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, #a3c64a 0%, #e6f7d4 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.7s cubic-bezier(0.4,0.2,0.2,1);
+    z-index: 2;
+}
+.delem_main_container #delem_label.animated::after,
+.step_main_container #delem_label.animated::after,
+.cybelic_main_part #delem_label.animated::after {
+    width: 100%;
+}
+
+/* 3. Feature list icons */
+.delem_main_container .desc_of_machine ul li::before,
+.step_main_container .desc_of_machine ul li::before,
+.cybelic_main_part .desc_of_machine ul li::before {
+    content: '\2713'; /* checkmark */
+    color: #a3c64a;
+    font-weight: bold;
+    margin-right: 0.7em;
+    font-size: 1.1em;
+    position: static;
+}
+
+/* 4. Gradient accent bar under title */
+.delem_main_container #delem_label::before,
+.step_main_container #delem_label::before,
+.cybelic_main_part #delem_label::before {
+    content: '';
+    display: block;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #a3c64a 0%, #e6f7d4 100%);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 3px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* 5. Responsive tweaks for cards */
+@media (max-width: 700px) {
+  .delem_main_container .machine_two_pair,
+  .step_main_container .machine_two_pair,
+  .cybelic_main_part .machine_two_pair {
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+/* Force all text to black for Standard Components page only */
+.standard_main_components,
+.standard_main_components * {
+    color: #222 !important;
+}
+
+/* Keep green for main title and section titles */
+.standard_main_components #standard_label,
+.standard_main_components .tool_holder_part #de_text,
+.standard_main_components .wila_tool_holder #de_text {
+    color: #a3c64a !important;
+}
+
+@media (max-width: 700px) {
+  #edge_label,
+  #crowningheavy_label,
+  #hydraulic_c,
+  #standard_label,
+  #accessories_label {
+    font-size: 1rem;
+    padding: 0.4rem 0.2rem;
+    border-radius: 5px;
+  }
+}
+
+.standard_main_components .green-title-box {
+    background: #a3c64a !important;
+    color: #fff !important;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.1rem 0.5rem;
+    border-radius: 12px;
+    margin: 0.7rem 0 0.7rem 0;
+    font-size: 1.35rem;
+    display: block;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(163,198,74,0.08);
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 1.2;
+}
+
+.standard_main_components .h_images, .standard_main_components .h_im_1 {
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+    border-radius: 0 !important;
+}
+
+.standard_main_components .h_im_1 img {
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+}
+
+.standard_main_components .hy_img_part .green-title-box {
+    width: 100%;
+    margin: 0.7rem 0 0.7rem 0;
+    text-align: center;
+    display: block;
+}
+
+.edge-h-title, .bending-tools-title {
+    color: #a3c64a !important;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1.2rem 0 1.2rem 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0;
+    display: block;
+}
+
+.green-title-box {
+  background: #a3c64a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 16px;
+  margin: 1.5rem auto 1.5rem auto;
+  box-shadow: 0 2px 10px rgba(163,198,74,0.10);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dark-title-box {
+  background: #4d4f48;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.6rem 1.1rem;
+  border-radius: 7px;
+  margin: 1rem 0 1.2rem 0;
+  box-shadow: 0 2px 10px rgba(77,79,72,0.10);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: inline-block;
+}
